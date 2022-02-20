@@ -24,6 +24,9 @@ jobs:
         uses: gradle/gradle-build-action@v2
         with:
           gradle-version: current
+          
+      - name: Gradle permissions
+        run: chmod +x gradlew
         
       - name: Build Gradle
         run: ./gradlew build
